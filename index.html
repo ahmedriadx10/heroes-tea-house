@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- font awesome cdn -->
@@ -31,28 +36,78 @@
     <title>Tea House</title>
   </head>
   <body class="scroll-smooth">
-<!-- navigation menu -->
 
-<nav class="flex justify-between items-center max-w-7xl w-[90%] mx-auto border py-7">
-<div class="bg-linear-[90deg,#FF8938,#ff0000] bg-clip-text">
+    <!-- daisyUI navigation component -->
+    <div class="navbar bg-base-100 max-w-7xl mx-auto w-[90%]">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li class="font-medium text-[18px]"><a href="#home">Home</a></li>
+            <li class="font-medium text-[18px]">
+              <a href="#products">Products</a>
+            </li>
+            <li class="font-medium text-[18px]">
+              <a href="#clients">Clients</a>
+            </li>
+            <li class="font-medium text-[18px]"><a href="#event">Events</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <div class="bg-linear-[90deg,#FF8938,#ff0000] bg-clip-text">
+          <h1
+            class="font-extrabold text-[35px] lg:text-[50px] text-transparent"
+          >
+            Tea House
+          </h1>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-ghost btn-circle">
+          <div class="indicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+            <span class="badge badge-xs badge-warning indicator-item"></span>
+          </div>
+        </button>
+      </div>
+    </div>
 
-<h1 class="font-extrabold text-[35px] lg:text-[50px] text-transparent">Tea House</h1>
-
-
-
-</div>
-
-
-<ul class="flex justify-between gap-6">
-  <li class="font-medium text-[18px]"><a href="#home">Home</a></li>
-  <li class="font-medium text-[18px]"><a href="#products">Products</a></li>
-  <li class="font-medium text-[18px]"><a href="#clients">Clients</a></li>
-  <li class="font-medium text-[18px]"><a href="#event">Events</a></li>
-</ul>
-</nav>
     <header
       class="py-12 flex flex-col lg:flex-row lg:justify-between max-w-7xl mx-auto w-[90%] gap-12"
-    id="home">
+      id="home"
+    >
       <!-- banner info -->
 
       <div class="space-y-8 max-w-[600px] mx-auto">
@@ -67,7 +122,7 @@
         <!-- hero button area -->
         <div>
           <button
-            class="bg-linear-[90deg,#FF8938,#ff0000] py-4 px-5 rounded-lg text-white space-x-1 cursor-pointer hover:-translate-y-1 transition-transform" 
+            class="bg-linear-[90deg,#FF8938,#ff0000] py-4 px-5 rounded-lg text-white space-x-1 cursor-pointer hover:-translate-y-1 transition-transform"
           >
             <span class="text-[20px] font-bold">Explore More </span
             ><i class="fa-solid fa-arrow-right-long -rotate-45"></i>
@@ -227,218 +282,248 @@
 
       <!-- meet clients area -->
 
-<section class="relative p-1 rounded-xl max-w-7xl overflow-hidden w-[90%] mx-auto  mt-[60px] md:mt-20 lg:mt-[100px] xl:mt-[120px] " id="clients">
-
- <section
-        class=" mx-auto  flex flex-col items-center lg:flex-row lg:justify-between bg-linear-[90deg,#FF8938,#ff0000] px-10 py-10 xl:px-[70px] xl:py-20 rounded-lg  gap-12 lg:gap-0 relative z-100"
+      <section
+        class="relative p-1 rounded-xl max-w-7xl overflow-hidden w-[90%] mx-auto mt-[60px] md:mt-20 lg:mt-[100px] xl:mt-[120px]"
+        id="clients"
       >
-        <!-- clients area text -->
-        <div class="space-y-7 max-w-[440px]">
-          <h6 class="font-extrabold text-[30px] lg:text-[45px] text-white">
-            Meet Our Super Clients
-          </h6>
-          <p class="font-medium lg:pr-2 xl:pr-0 leading-7 text-white">
+        <section
+          class="mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-linear-[90deg,#FF8938,#ff0000] px-10 py-10 xl:px-[70px] xl:py-20 rounded-lg gap-12 lg:gap-0 relative z-100"
+        >
+          <!-- clients area text -->
+          <div class="space-y-7 max-w-[440px]">
+            <h6 class="font-extrabold text-[30px] lg:text-[45px] text-white">
+              Meet Our Super Clients
+            </h6>
+            <p class="font-medium lg:pr-2 xl:pr-0 leading-7 text-white">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable.
+            </p>
+            <!-- clients area button -->
+            <div>
+              <button
+                class="bg-white py-4 px-8 rounded-lg cursor-pointer hover:-translate-y-1 transition-transform"
+              >
+                <span
+                  class="text-transparent bg-clip-text bg-linear-[90deg,#FF8938,#ff0000] font-bold text-[20px]"
+                  >Show All</span
+                >
+              </button>
+            </div>
+          </div>
+
+          <!-- client review area -->
+
+          <div class="relative space-y-12">
+            <div
+              class="bg-white px-[50px] py-[42px] max-w-[435px] rounded-lg md:absolute lg:static xl:absolute z-100 -left-[100px] top-[150px]"
+            >
+              <p class="text-[#777777] leading-7">
+                We are providing the best and suitable home insurance services
+                for the people who are interested to treatment
+              </p>
+              <h6 class="font-bold mt-5">Ilham Yuda</h6>
+              <p class="text-[#5D5A6F] font-medium">Businessman</p>
+
+              <!-- client image -->
+              <div class="absolute -top-5 -left-5 bg-white rounded-full p-1">
+                <img src="./images/client.png" alt="" />
+              </div>
+              <!-- icon circle -->
+              <div class="absolute right-6">
+                <img src="./images/circles.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="bg-white md:bg-[rgba(255,255,255,0.42)] lg:bg-white xl:bg-[rgba(255,255,255,0.42)] px-[50px] py-[42px] max-w-[435px] rounded-lg relative"
+            >
+              <p class="text-[#777777] leading-7">
+                We are providing the best and suitable home insurance services
+                for the people who are interested to treatment
+              </p>
+              <h6 class="font-bold mt-5">Ilham Yuda</h6>
+              <p class="text-[#5D5A6F] font-medium">Engineer</p>
+
+              <!-- client image -->
+              <div class="absolute -top-5 -left-5 bg-white rounded-full p-1">
+                <img src="./images/client.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="bg-white md:bg-[rgba(255,255,255,0.42)] lg:bg-white xl:bg-[rgba(255,255,255,0.42)] px-[50px] py-[42px] max-w-[435px] rounded-lg relative"
+            >
+              <p class="text-[#777777] leading-7">
+                We are providing the best and suitable home insurance services
+                for the people who are interested to treatment
+              </p>
+              <h6 class="font-bold mt-5">Ilham Yuda</h6>
+              <p class="text-[#5D5A6F] font-medium">Designer</p>
+
+              <!-- client image -->
+              <div class="absolute -top-5 -left-5 bg-white rounded-full p-1">
+                <img src="./images/client.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div
+          class="absolute w-full h-full left-0 top-0 bg-conic-[#ffffff,purple,aqua,#FFFFFF,#FFFFFF,#FFFFFF] scale-500 animate-spin z-50 [animation-duration:8s]"
+        ></div>
+      </section>
+
+      <!-- event area-->
+      <section
+        class="w-[90%] max-w-7xl mx-auto pt-12 lg:pt-[120px] pb-12 lg:pb-[70px]"
+        id="event"
+      >
+        <!-- event area info -->
+
+        <div class="w-[90%] lg:max-w-[900px] mx-auto text-center space-y-2.5">
+          <h5 class="font-extrabold text-[30px] lg:text-[45px]">
+            News & Events
+          </h5>
+          <p class="font-medium leading-7 text-[#777777]">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
             humour, or randomised words which don't look even slightly
             believable.
           </p>
-          <!-- clients area button -->
-          <div>
-            <button class="bg-white py-4 px-8 rounded-lg cursor-pointer hover:-translate-y-1 transition-transform">
-              <span
-                class="text-transparent bg-clip-text bg-linear-[90deg,#FF8938,#ff0000] font-bold text-[20px]"
-                >Show All</span
-              >
+        </div>
+
+        <!-- events  cards-->
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-12">
+          <!-- card -->
+
+          <div
+            class="border border-gray-300 rounded-[10px] p-5 space-y-3.5 transition-all hover:shadow-green-300 hover:shadow-md hover:-translate-y-1.5"
+          >
+            <img src="./images/news-1.png" alt="" class="w-full" />
+
+            <span class="font-medium text-[#777777]">Feb 05, 2027</span>
+
+            <h6 class="font-extrabold text-[20px] mt-2">
+              Collecting 8 points for discount
+            </h6>
+            <p class="font-medium leading-7">
+              There are many variations of passages of Lorem Ipsum available.
+            </p>
+            <a href="" class="font-bold">Learn More</a>
+          </div>
+          <!-- card -->
+
+          <div
+            class="border border-gray-300 rounded-[10px] p-5 space-y-3.5 transition-all hover:shadow-green-300 hover:shadow-md hover:-translate-y-1.5"
+          >
+            <img src="./images/news-1.png" alt="" class="w-full" />
+
+            <span class="font-medium text-[#777777]">Feb 05, 2027</span>
+
+            <h6 class="font-extrabold text-[20px] mt-2">
+              Collecting 8 points for discount
+            </h6>
+            <p class="font-medium leading-7">
+              There are many variations of passages of Lorem Ipsum available.
+            </p>
+            <a href="" class="font-bold">Learn More</a>
+          </div>
+          <!-- card -->
+
+          <div
+            class="border border-gray-300 rounded-[10px] p-5 space-y-3.5 transition-all hover:shadow-green-300 hover:shadow-md hover:-translate-y-1.5"
+          >
+            <img src="./images/news-1.png" alt="" class="w-full" />
+
+            <span class="font-medium text-[#777777]">Feb 05, 2027</span>
+
+            <h6 class="font-extrabold text-[20px] mt-2">
+              Collecting 8 points for discount
+            </h6>
+            <p class="font-medium leading-7">
+              There are many variations of passages of Lorem Ipsum available.
+            </p>
+            <a href="" class="font-bold">Learn More</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="py-12 lg:py-[100px] xl:py-[120px] bg-[#ffede8]">
+      <!-- footer main contaner -->
+
+      <section class="w-[90%] mx-auto max-w-7xl">
+        <!-- footer button area -->
+
+        <div class="flex justify-between items-center">
+          <div><img src="./images/cup.png" alt="" /></div>
+          <div class="flex gap-4 items-center justify-between">
+            <p class="text-[20px] font-medium text-[#777777]">
+              Ready to get strated?
+            </p>
+            <button
+              class="bg-linear-[90deg,#FF8938,#ff0000] py-4 px-5 rounded-lg text-white text-[20px] font-bold cursor-pointer hover:-translate-y-1 transition-transform"
+            >
+              Get Started
             </button>
           </div>
         </div>
 
-        <!-- client review area -->
+        <!-- footer links -->
 
-        <div class="relative space-y-12">
-          <div
-            class="bg-white px-[50px] py-[42px] max-w-[435px] rounded-lg md:absolute lg:static xl:absolute z-100 -left-[100px] top-[150px]"
-          >
-            <p class="text-[#777777] leading-7">
-              We are providing the best and suitable home insurance services for
-              the people who are interested to treatment
-            </p>
-            <h6 class="font-bold mt-5">Ilham Yuda</h6>
-            <p class="text-[#5D5A6F] font-medium">Businessman</p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-10 mt-12 xl:mt-[60px]"
+        >
+          <ul class="space-y-4">
+            <li class="font-semibold text-[20px]">Quick Links</li>
+            <li class="text-[#494949]"><a href="">Home</a></li>
+            <li class="text-[#494949]"><a href="">About Us</a></li>
+            <li class="text-[#494949]"><a href="">Insurance</a></li>
+            <li class="text-[#494949]"><a href="">Privacy Policy</a></li>
+          </ul>
+          <ul class="space-y-4">
+            <li class="font-semibold text-[20px]">Our Service</li>
+            <li class="text-[#494949]"><a href="">Life Insurance</a></li>
+            <li class="text-[#494949]"><a href="">Car Insurance</a></li>
+            <li class="text-[#494949]"><a href="">Health Insurance</a></li>
+            <li class="text-[#494949]"><a href="">House Insurance</a></li>
+          </ul>
+          <ul class="space-y-4">
+            <li class="font-semibold text-[20px]">Help</li>
+            <li class="text-[#494949]"><a href="">FAQs</a></li>
+            <li class="text-[#494949]"><a href="">Concatc Us</a></li>
+          </ul>
 
-            <!-- client image -->
-            <div class="absolute -top-5 -left-5 bg-white rounded-full p-1">
-              <img src="./images/client.png" alt="" />
+          <div class="">
+            <h6 class="text-[24px] font-semibold leading-10 mb-10">
+              Subscribe to our <span class="block">newsletter</span>
+            </h6>
+            <div class="flex justify-between">
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="focus:outline-0 border-b-2 border-[#494949] py-3 w-[90%] placeholder:text-[#494949] placeholder:text-[14px]"
+              />
+              <button
+                class="bg-linear-[90deg,#FF8938,#ff0000] text-white text-[20px] rounded-full w-10 h-10 cursor-pointer"
+              >
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
             </div>
-            <!-- icon circle -->
-            <div class="absolute right-6">
-              <img src="./images/circles.png" alt="" />
-            </div>
-          </div>
-          <div
-            class="bg-white md:bg-[rgba(255,255,255,0.42)] lg:bg-white xl:bg-[rgba(255,255,255,0.42)] px-[50px] py-[42px] max-w-[435px] rounded-lg relative"
-          >
-            <p class="text-[#777777] leading-7">
-              We are providing the best and suitable home insurance services for
-              the people who are interested to treatment
-            </p>
-            <h6 class="font-bold mt-5">Ilham Yuda</h6>
-            <p class="text-[#5D5A6F] font-medium">Engineer</p>
 
-            <!-- client image -->
-            <div class="absolute -top-5 -left-5 bg-white rounded-full p-1">
-              <img src="./images/client.png" alt="" />
-            </div>
-          </div>
-          <div
-            class="bg-white md:bg-[rgba(255,255,255,0.42)] lg:bg-white xl:bg-[rgba(255,255,255,0.42)] px-[50px] py-[42px] max-w-[435px] rounded-lg relative"
-          >
-            <p class="text-[#777777] leading-7">
-              We are providing the best and suitable home insurance services for
-              the people who are interested to treatment
-            </p>
-            <h6 class="font-bold mt-5">Ilham Yuda</h6>
-            <p class="text-[#5D5A6F] font-medium">Designer</p>
+            <!-- footer icon area -->
 
-            <!-- client image -->
-            <div class="absolute -top-5 -left-5 bg-white rounded-full p-1">
-              <img src="./images/client.png" alt="" />
+            <div class="flex gap-5 text-[#494949] text-[24px] mt-12">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-square-instagram"></i>
             </div>
           </div>
         </div>
-      </section>
 
-
-  <div class="absolute w-full h-full left-0 top-0 bg-conic-[#ffffff,purple,aqua,#FFFFFF,#FFFFFF,#FFFFFF] scale-500 animate-spin z-50 [animation-duration:8s]"></div>
-
-</section>
-
-     
-
-
-      <!-- event area-->
-<section class="w-[90%] max-w-7xl mx-auto pt-12 lg:pt-[120px] pb-12 lg:pb-[70px]" id="event">
-<!-- event area info -->
-
-<div class="w-[90%] lg:max-w-[900px] mx-auto text-center space-y-2.5">
-<h5 class="font-extrabold text-[30px] lg:text-[45px]">News & Events</h5>
-<p class="font-medium leading-7 text-[#777777]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-</div>
-
-
-<!-- events  cards-->
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-12">
-
-
-
-
-<!-- card -->
-
-<div class="border border-gray-300 rounded-[10px] p-5 space-y-3.5 transition-all hover:shadow-green-300 hover:shadow-md hover:-translate-y-1.5">
-
-  <img src="./images/news-1.png" alt="" class="w-full">
-
-  <span class="font-medium text-[#777777] ">Feb 05, 2027</span>
-
-<h6 class="font-extrabold text-[20px] mt-2">Collecting 8 points for discount</h6>
-<p class="font-medium leading-7">There are many variations of passages of Lorem Ipsum available.</p>
-<a href="" class="font-bold">Learn More</a>
-</div>
-<!-- card -->
-
-<div class="border border-gray-300 rounded-[10px] p-5 space-y-3.5 transition-all hover:shadow-green-300 hover:shadow-md hover:-translate-y-1.5">
-
-  <img src="./images/news-1.png" alt="" class="w-full">
-
-  <span class="font-medium text-[#777777] ">Feb 05, 2027</span>
-
-<h6 class="font-extrabold text-[20px] mt-2">Collecting 8 points for discount</h6>
-<p class="font-medium leading-7">There are many variations of passages of Lorem Ipsum available.</p>
-<a href="" class="font-bold">Learn More</a>
-</div>
-<!-- card -->
-
-<div class="border border-gray-300 rounded-[10px] p-5 space-y-3.5 transition-all hover:shadow-green-300 hover:shadow-md hover:-translate-y-1.5">
-
-  <img src="./images/news-1.png" alt="" class="w-full">
-
-  <span class="font-medium text-[#777777] ">Feb 05, 2027</span>
-
-<h6 class="font-extrabold text-[20px] mt-2">Collecting 8 points for discount</h6>
-<p class="font-medium leading-7">There are many variations of passages of Lorem Ipsum available.</p>
-<a href="" class="font-bold">Learn More</a>
-</div>
-
-</div>
-</section>
-
-    </main>
-    <footer class="py-12 lg:py-[100px] xl:py-[120px] bg-[#ffede8]">
-
-
-      <!-- footer main contaner -->
-
-      <section class="w-[90%] mx-auto max-w-7xl ">
-
-<!-- footer button area -->
-
-<div class="flex justify-between items-center">
-  <div><img src="./images/cup.png" alt=""></div>
-  <div class="flex gap-4 items-center justify-between"><p class="text-[20px] font-medium text-[#777777]">Ready to get strated?</p><button class="bg-linear-[90deg,#FF8938,#ff0000] py-4 px-5 rounded-lg text-white text-[20px] font-bold  cursor-pointer hover:-translate-y-1 transition-transform">Get Started</button></div>
-</div>
-
-
-<!-- footer links -->
-
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-10 mt-12 xl:mt-[60px]">
-
-
-<ul class="space-y-4">
-  <li class="font-semibold text-[20px]">Quick Links</li>
-  <li class="text-[#494949]" ><a href="">Home</a></li>
-  <li class="text-[#494949]" ><a href="">About Us</a></li>
-  <li class="text-[#494949]" ><a href="">Insurance</a></li>
-  <li class="text-[#494949]" ><a href="">Privacy Policy</a></li>
-</ul>
-<ul class="space-y-4">
-  <li class="font-semibold text-[20px]">Our Service</li>
-  <li class="text-[#494949]" ><a href="">Life Insurance</a></li>
-  <li class="text-[#494949]" ><a href="">Car Insurance</a></li>
-  <li class="text-[#494949]" ><a href="">Health Insurance</a></li>
-  <li class="text-[#494949]" ><a href="">House Insurance</a></li>
-</ul>
-<ul class="space-y-4">
-  <li class="font-semibold text-[20px]">Help</li>
-  <li class="text-[#494949]" ><a href="">FAQs</a></li>
-  <li class="text-[#494949]" ><a href="">Concatc Us</a></li>
-  
-</ul>
-
-
-<div class="">
-  <h6 class="text-[24px] font-semibold leading-10 mb-10">Subscribe to our <span class="block">newsletter</span></h6>
-<div class="flex justify-between">
-  <input type="email" placeholder="Email Address" class="focus:outline-0 border-b-2 border-[#494949] py-3 w-[90%] placeholder:text-[#494949] placeholder:text-[14px]">
-  <button class="bg-linear-[90deg,#FF8938,#ff0000] text-white text-[20px] rounded-full w-10 h-10 cursor-pointer"><i class="fa-solid fa-angle-right"></i></button>
-</div>
-
-<!-- footer icon area -->
-
-<div class="flex gap-5 text-[#494949] text-[24px] mt-12"><i class="fa-brands fa-facebook-f"></i>
-<i class="fa-brands fa-twitter"></i>
-<i class="fa-brands fa-square-instagram"></i>
-</div>
-
-</div>
-
-
-</div>
-
-
-<p class="text-[#494949] font-medium text-center mt-12">&copy; 2027 UIDesign.to - All rights reserved.</p>
-
+        <p class="text-[#494949] font-medium text-center mt-12">
+          &copy; 2027 UIDesign.to - All rights reserved.
+        </p>
       </section>
     </footer>
   </body>
