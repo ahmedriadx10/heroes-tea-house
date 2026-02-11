@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,10 +30,29 @@
 
     <title>Tea House</title>
   </head>
-  <body>
+  <body class="scroll-smooth">
+<!-- navigation menu -->
+
+<nav class="flex justify-between items-center max-w-7xl w-[90%] mx-auto border py-7">
+<div class="bg-linear-[90deg,#FF8938,#ff0000] bg-clip-text">
+
+<h1 class="font-extrabold text-[35px] lg:text-[50px] text-transparent">Tea House</h1>
+
+
+
+</div>
+
+
+<ul class="flex justify-between gap-6">
+  <li class="font-medium text-[18px]"><a href="#home">Home</a></li>
+  <li class="font-medium text-[18px]"><a href="#products">Products</a></li>
+  <li class="font-medium text-[18px]"><a href="#clients">Clients</a></li>
+  <li class="font-medium text-[18px]"><a href="#event">Events</a></li>
+</ul>
+</nav>
     <header
       class="py-12 flex flex-col lg:flex-row lg:justify-between max-w-7xl mx-auto w-[90%] gap-12"
-    >
+    id="home">
       <!-- banner info -->
 
       <div class="space-y-8 max-w-[600px] mx-auto">
@@ -82,7 +101,7 @@
 
     <main>
       <!-- featured products area -->
-      <section class="py-10 md:py-[60px] lg:py-20">
+      <section class="py-10 md:py-[60px] lg:py-20" id="products">
         <!-- featured products area info -->
 
         <div class="space-y-5 text-center mx-auto w-[90%] md:max-w-[700px]">
@@ -208,7 +227,7 @@
 
       <!-- meet clients area -->
 
-<section class="relative p-1 rounded-xl max-w-7xl overflow-hidden w-[90%] mx-auto  mt-[60px] md:mt-20 lg:mt-[100px] xl:mt-[120px] ">
+<section class="relative p-1 rounded-xl max-w-7xl overflow-hidden w-[90%] mx-auto  mt-[60px] md:mt-20 lg:mt-[100px] xl:mt-[120px] " id="clients">
 
  <section
         class=" mx-auto  flex flex-col items-center lg:flex-row lg:justify-between bg-linear-[90deg,#FF8938,#ff0000] px-10 py-10 xl:px-[70px] xl:py-20 rounded-lg  gap-12 lg:gap-0 relative z-100"
@@ -299,7 +318,7 @@
 
 
       <!-- event area-->
-<section class="w-[90%] max-w-7xl mx-auto pt-12 lg:pt-[120px] pb-12 lg:pb-[70px]">
+<section class="w-[90%] max-w-7xl mx-auto pt-12 lg:pt-[120px] pb-12 lg:pb-[70px]" id="event">
 <!-- event area info -->
 
 <div class="w-[90%] lg:max-w-[900px] mx-auto text-center space-y-2.5">
