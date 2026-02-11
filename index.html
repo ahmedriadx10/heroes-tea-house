@@ -36,9 +36,10 @@
     <title>Tea House</title>
   </head>
   <body class="scroll-smooth">
-
     <!-- daisyUI navigation component -->
-    <div class="navbar bg-base-100 w-[90%] fixed bg-[rgba(255,255,255,0.29)] backdrop-blur-md right-[5%] top-0 -translate-[50%_50%] py-0.5">
+    <div
+      class="navbar bg-base-100 px-[5%] fixed bg-[rgba(255,255,255,0.29)] backdrop-blur-md right-0 top-0 -translate-[50%_50%] py-0.5"
+    >
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -98,14 +99,16 @@
                 d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
               />
             </svg>
-            <span class="badge badge-xs badge-warning indicator-item"></span>
+            <span
+              class="badge badge-xs badge-warning indicator-item animate-pulse"
+            ></span>
           </div>
         </button>
       </div>
     </div>
 
     <header
-      class="py-[60px]  flex flex-col lg:flex-row lg:justify-between max-w-7xl mx-auto w-[90%] gap-12"
+      class="py-[60px] flex flex-col lg:flex-row lg:justify-between max-w-7xl mx-auto w-[90%] gap-12"
       id="home"
     >
       <!-- banner info -->
@@ -502,7 +505,7 @@
               <input
                 type="email"
                 placeholder="Email Address"
-                class=" input input ghost w-[85%]"
+                class="input input ghost w-[85%]"
               />
               <button
                 class="bg-linear-[90deg,#FF8938,#ff0000] text-white text-[20px] rounded-full w-10 h-10 cursor-pointer"
